@@ -230,17 +230,14 @@ public class ventana extends JFrame {
                 if (txtvalor.getText().equals("")) {
                     JOptionPane.showMessageDialog(null, "ingrese el valor");
                 } else {
-
-                    if (valor == 0) {
-                        valor = 0;
-
+                if (valor == 0) {
+                        valor = Integer.parseInt(txtvalor.getText());
                     } else {
-                        valor *= Integer.parseInt(txtvalor.getText());
-
+                        valor -= Integer.parseInt(txtvalor.getText());
                     }
-                    simbolos = '*';
+                    simbolos = 'x';
                     txtvalor.setText("");
-
+                   
                 }
             }
         };
@@ -256,14 +253,12 @@ public class ventana extends JFrame {
                 if (txtvalor.getText().equals("")) {
                     JOptionPane.showMessageDialog(null, "ingrese el valor");
                 } else {
-                    if (Double.parseDouble(txtvalor.getText()) >= 0) {
-                        double total = Math.sqrt(Double.parseDouble(txtvalor.getText()));
-                        txtvalor.setText(String.valueOf(total));
-                        valor = 0;
+                    if (valor == 0) {
+                        valor = Integer.parseInt(txtvalor.getText());
                     } else {
-                        JOptionPane.showMessageDialog(null, "error");
+                        valor -= Integer.parseInt(txtvalor.getText());
                     }
-                    simbolos = '/';
+                    simbolos = '%';
                     txtvalor.setText("");
                 }
             }
